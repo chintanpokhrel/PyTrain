@@ -1,0 +1,144 @@
+<item>
+<question>
+What is the output of the following?
+A = [1,2,3,4]
+B[0] = 5
+print A
+</question>
+<answer>
+[5, 2, 3, 4]
+</answer>
+</item>
+<item>
+<question>
+Is string mutable?
+</question>
+<answer>
+Yes. It means that everytime you do something like:
+a='apple'
+The object representing 'apple' cannot be modified in memory even when you call methods on the object. Contrast this with lists s.a. [1].append(2)
+</answer>
+</item>
+
+<question>
+Explain copy, deep copy and assignment
+</question>
+<answer>
+Ask the trainer dude. He should be explaining it
+</answer>
+<question>
+Ternary operator (a?b:c in other languages) - how does it look like in Python?
+</question>
+<answer>
+a=b if c else d
+</answer>
+<question>
+What is the o/p?
+a="ba"
+print a*2
+</question>
+<answer>
+</answer>
+<question>
+Is this valid? 
+a<b == c
+</question>
+<answer>
+Yes. It represents the condition: (a less than b) and (b equals c)
+</answer>
+<question>
+print set(1,2,3)  | set(2,3,4)
+</question>
+<answer>
+</answer>
+<question>
+Functions and ints are objects in Python, true or false?
+</question>
+<answer>
+True
+</answer>
+<question>
+A function with a generator has: the yield keyword, the generate keyword or the raise keyword?
+</question>
+<answer>
+yield
+</answer>
+<question>
+Apart from __next__ we need a ____ function to implement an iterator
+</question>
+<answer>
+__iter__
+</answer>
+<question>
+The computational complexity of slicing k characters from a string of length n is (mystr[p:q]) ? O(n), O(nlogk) O(k)
+</question>
+<answer>
+</answer>
+<question>
+What keyword do we use to define a function in Python?
+<question>
+<answer>
+def
+</answer>
+<question>What's the Python philosophy? There is only one obvious way to do something OR there are many ways to do something and you choose what you want
+</question>
+<answer>
+</answer>
+<question>
+How old is Guido Van Rossum?
+</question>
+<answer>
+Wikipedia
+</answer>
+<question>
+How old are you? 
+</question>
+<answer>
+Your adhaar card has it
+</answer>
+<question>
+Did Shaktimaan kill Kilvish?
+</question>
+<answer>
+</answer>
+<question>
+To convert a string into an int we do: parseint('123'), int('123'), '123'.int()
+</question>
+<answer>
+int('123')
+</answer>
+<question>
+Whats the difference between assignment and copy ?
+</question>
+<answer>
+</answer>
+<question>
+To use the function ceil from module math, which one should you prefer? import math OR from math import ceil
+</question>
+<answer>
+</answer>
+<question>
+The default case for a switch statement in Python is At the Beginning OR at the end?
+</question>
+<answer>
+<answer>
+<question>
+a=b if c else d is an example of Relational Operator, Conditional Operator, jump statement?
+</question>
+<answer></answer>
+<question>
+which keyword is used to subclass a class in Python? inherits/extends
+</question>
+<answer>
+</answer>
+<question>
+'a' is a character and "a" is a string?
+</question>
+<answer>
+</answer>
+<question>
+What is your name ? 
+</question>
+<answer>
+I have no fucking idea
+</answer>

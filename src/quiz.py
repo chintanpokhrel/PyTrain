@@ -6,7 +6,7 @@ class Question:
 		self._answer = answer
 
 	@property
-	def question():
+	def question(self):
 		return self._question 
 
 	@question.setter
@@ -32,7 +32,8 @@ class Quiz:
 		
 		for line in open(filename):
 			line_arr = line.split(self.DELIM)
-			self.questions.add(Question(line_arr[0], line_arr[1])
+			self.questions.append(Question(line_arr[0], line_arr[1]))
+
 		if len(self.questions) == 0:
 			#TODO: Check if this is the right exception to raise
 			raise ValueError('Nothing in the file')
@@ -40,21 +41,75 @@ class Quiz:
 	
 	def get_question(self):
 		import random
-		que_num = int(random.random()*(len(self.questions)-1)
+		que_num = int(random.random()*(len(self.questions)-1))
 		return self.questions[que_num]
 
+DATAFILE='data/questions.xml'
+def addques():
+	while True:
+		q = raw_input("Question> ")
+		a = raw_input("Answer> ")
+	
+		import xml_wrapper
+		xml_wrapper.additem(q, a, DATAFILE)
+		
+		if checkquit():
+			break
+
+
+
+def master():
+	print "What to do ?"
+	print "1. Play"
+	print "2. Add Question"
+	choice = raw_input('Choice> ');
+	if choice == '2':
+		addques()
+	
+			
+def checkquit():
+	print "Enter a character to continue, q to quit"
+	from getch import getch
+	c = getch()
+	if c == 'q' or c == 'Q':
+		return True
+	return False
+
+def getrandom(n):
+	from random import random
+	from math import ceil
+	return int(ceil(n*random()))
 
 def play():
-	datafile_path = 'src/data'
+	n = raw_input('How many participants? ')
+	print "Okay, let's play!"
+	
+	from xml_wrapper import getitem_at, numquestions
+	nquest = numquestions()
+	
+	while True:
+		participant = getrandom(n)
+		print "Question goes for participant %s"%participant
+	
+		question, answer = getitem_at(getrandom(nquest), DATAFILE)
+		print question
+		
+		if checkquit():
+			break
+		print answer 			
+
+def _play():
+	datafile_path = 'data'
 	q = Quiz('quizzes.data', datafile_path)
 		
+	print "Let's have a pop quiz, here you go"
 	while True:
-		print "Let's have a pop quiz, here you go"
 		question = q.get_question()
 		print question.question
 		print "Press q to exit, anything else to continue"
-		c = getchar()
-		if c == 'q' or c === 'Q':
+		from getch import getch
+		c = getch()
+		if c == 'q' or c == 'Q':
 			break
 		print question.answer
 		
