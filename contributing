@@ -1,0 +1,21 @@
+If you're writing your very first programs in Python and also want to make your first open source contribution, 
+this is where you start:
+
+1. Create an account on github
+2. Fork this repository.
+   Visit https://github.com/chintanpokhrel/PyTrain and click on Fork on the top right
+4. Set up git if you haven't already
+   sudo apt-get install git on Ubuntu
+5. Clone it on your development machine
+   git clone <https://github.com/yourusername/PyTrain>
+6. Run quiz.py
+7. Create a new branch
+8. Do the changes
+9. Commit to that branch
+8. Test it
+10. Commit to your master branch if you're ready
+11. Push your code online
+12. Open a pull request
+13. Someone has to review that code
+14. Your pull request is accepted
+15. You've made your first open source contribution
